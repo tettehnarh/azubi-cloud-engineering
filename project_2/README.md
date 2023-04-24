@@ -4,7 +4,7 @@ This project looks at creating a Guest Book web app with the PHP scripting langu
 
 ### Collaborations
 
-This is a hand-on cloud engineering project delivered by the Azubi Africa Cloud Team(Team Agile) in 2023. After 6 months of AWS cloud training and front-end development, we got a chance to work on some realife cloud projects.
+This is a hand-on cloud engineering project delivered by the Azubi Africa Cloud Team(Team Agile) in 2023. After 6 months of AWS cloud training and front-end development, we got a chance to work on some real life cloud projects.
 The team members below made this project successful :
 
 1.  Joseph W Wafula [@their_linkedin]()
@@ -54,12 +54,23 @@ This tutorial will walk you through the steps to create the sample web applicati
 
 <!-- GETTING STARTED -->
 
-Getting Started
+## Getting Started
 
-1. Follow the steps in this url to create a DynamoDB Table via the AWS console:
-   <a href="https://www.youtube.com/watch?v=dOTUl2mZNVQ">Create Amazon Dynamo Table</a>
+1. Follow the steps below to create a DynamoDB Table via the AWS console:
 
-   Use below parameters:
+   1. Sign in to the AWS Management Console and navigate to the DynamoDB service.
+   2. Click on "Create table" button.
+   3. Provide a name for the table.
+   4. Define the primary key for the table. This can be a single attribute or a combination of attributes.
+   5. Specify any additional attributes you want to include in the table.
+   6. Configure the table's read and write capacity. You can choose to set this manually or use on-demand capacity.
+   7. Configure any optional settings, such as encryption, tags, and stream settings.
+   8. Click on "Create table" button.
+
+We used below parameters in creating our table
+
+Use below parameters:
+
    <ul>
    <li>Table Name: <i>GuestBook</i></li>
    <li>Partition key: <i>Email</i></li>
@@ -68,10 +79,10 @@ Getting Started
    <li>Read/write capacity settings: <i>Provisioned<br>(mainatain default settings under read and write capacity)</br></i></li>
    </ul>
 
-   After table is created, create items with necessary attributes. Below is an image of what we used:
-   <br></br>
-   <img src="images/ddb_item.jpg" alt="Logo" width="auto" height="150">
-   <br></br>
+After table is created, create items with necessary attributes. Below is an image of what we used:
+<br></br>
+<img src="images/ddb_item.jpg" alt="Logo" width="auto" height="150">
+<br></br>
 
 2. Follow the steps in this url to install AWS SDK on your local machine
    <br>
@@ -132,3 +143,5 @@ Getting Started
             echo $tableRows;
 ?>
 ```
+
+## Automate DynamoDB table creation
