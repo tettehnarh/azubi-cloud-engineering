@@ -7,35 +7,35 @@ variable "location" {
 variable "db_name" {
   type        = string
   description = "The db name"
-  default     = "GameScores"
+  default     = "GuestBook"
 }
 
 variable "harsh_key" {
   type        = string
-  default     = "UserId"
+  default     = "Email"
   description = "The Harsh Key"
 }
 
 variable "range_key" {
   type        = string
-  default     = "GameTitle"
+  default     = "Name"
   description = "The range key"
 }
 
 variable "attribute_name" {
   type        = string
-  default     = "TopScore"
+  default     = "Country"
   description = "The Attribute name"
 }
 
 variable "global_secondary_index" {
   type        = string
-  default     = "GameTitleIndex"
+  default     = "GuestBookIndex"
   description = "Global secondary index name"
 }
 
 variable "db_name_tag" {
   type        = string
-  default     = "dynamodb-table-1"
-  description = "description"
+  default     = "dynamodb-guestbook"
+  description = "Team Agile Guest Book"
 }

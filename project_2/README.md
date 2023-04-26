@@ -145,3 +145,7 @@ After table is created, create items with necessary attributes. Below is an imag
 ```
 
 ## Automate DynamoDB table creation
+
+To reduce redundancy and complexities we will use terraform to create our dynamo dB table.
+
+We created a new file 'main.tf' to hole our Terraform code. To follow good coding practicewe created a separate file to hold variables for our Terraform code. This allows us t keep our variables organized and separate from the main Terraform configuration.

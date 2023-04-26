@@ -1,1 +1,19 @@
 **/.DS_Store
+
+# Terraform files
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+
+# Ignore any file ending in .tfvars
+*.tfvars
+
+# Ignore override files as they are usually used to override resources locally and don't need to be committed
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore .terraformrc and terraform.rc as they can contain secrets
+.terraformrc
+terraform.rc
