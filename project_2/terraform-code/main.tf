@@ -23,7 +23,7 @@ resource "aws_dynamodb_table" "basic-dynamodb-table" {
 
   attribute {
     name = var.attribute_name
-    type = "N"
+    type = "S"
   }
 
   ttl {
