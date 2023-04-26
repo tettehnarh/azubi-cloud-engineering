@@ -148,4 +148,15 @@ After table is created, create items with necessary attributes. Below is an imag
 
 To reduce redundancy and complexities we will use terraform to create our dynamo dB table.
 
-We created a new file 'main.tf' to hole our Terraform code. To follow good coding practicewe created a separate file to hold variables for our Terraform code. This allows us t keep our variables organized and separate from the main Terraform configuration.
+We created a new file 'main.tf' to hold our Terraform code. To follow good coding practice we created separate files to hold the variables for our Terraform code('variable.tf') and also another file('items.tf') to add dummy data to the tables. This allows us to keep our variables organized and separate from the main Terraform configuration.
+
+Make sure that all of the terraform files are at the same location.
+Ensure that the IAM credentials used by your AWS provider have the necessary permissions to create and manage DynamoDB tables.
+
+To apply the configuration:
+
+1. Run `terraform init` to initialize your Terraform project and download any necessary dependencies.
+2. Run `terraform plan` to see a preview of the changes that Terraform will make to your AWS resources.
+3. If the plan looks good, run `terraform apply` to apply the changes and create your DynamoDB table.
+
+Note: Remember to run `terraform destroy` to destroy the deployed resources to prevent unnecessary billings from AWS.
