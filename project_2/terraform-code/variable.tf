@@ -1,6 +1,6 @@
 variable "location" {
   type        = string
-  default     = "us-east-1"
+  default     = "us-east-2"
   description = "description"
 }
 
@@ -36,6 +36,6 @@ variable "global_secondary_index" {
 
 variable "db_name_tag" {
   type        = string
-  default     = "dynamodb-guestbook"
+  default     = "dynamodb_guestbook"
   description = "Team Agile Guest Book"
 }
