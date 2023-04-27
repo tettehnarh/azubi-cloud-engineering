@@ -35,7 +35,6 @@ if (!isset($_SESSION['UserData']['Username'])) {
             // Set up the client
             $client = DynamoDbClient::factory(
                 array(
-                    'profile' => 'default',
                     'region' => 'us-east-1',
                     'version' => '2012-08-10',
                 )
