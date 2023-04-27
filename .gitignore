@@ -18,3 +18,5 @@ override.tf.json
 # Ignore .terraformrc and terraform.rc as they can contain secrets
 .terraformrc
 terraform.rc
+
+.env
