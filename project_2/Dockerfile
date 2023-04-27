@@ -1,4 +1,4 @@
-FROM php:7.1-fpm
+FROM php:7.1-apache
 
 RUN apt-get update && \
     apt-get -y install git libz-dev libtidy-dev && \
@@ -23,10 +23,20 @@ RUN touch /usr/local/etc/php/conf.d/timezone.ini \
 RUN cd / && \
     git clone https://github.com/aws/aws-sdk-php.git
 
-RUN cd /aws-sdk-php && \
-    composer install && \
-    make build && \
-    make test
+# RUN cd /aws-sdk-php && \
+#     composer install && \
+#     make build && \
+#     make test
+
+# RUN cp -R /aws-sdk-php/vendor /var/www/html/
 
 # Copy the code into the container
 COPY . /var/www/html/
+
+RUN composer install
+
+# Expose port 80
+EXPOSE 80
+
+# Start Apache server
+CMD ["apache2-foreground"]
