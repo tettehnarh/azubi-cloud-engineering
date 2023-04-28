@@ -160,3 +160,42 @@ To apply the configuration:
 3. If the plan looks good, run `terraform apply` to apply the changes and create your DynamoDB table.
 
 Note: Remember to run `terraform destroy` to destroy the deployed resources to prevent unnecessary billings from AWS.
+
+## Steps to run the repo
+
+1. Clone the repo
+
+```bash
+git clone https://github.com/tettehnarh/azubi-cloud-engineering.git
+```
+
+2. Dockerize the PHP web app
+   To do this ensure you are in the project2 folder and run command below
+
+```bash
+docker build -t <YOUR_DOCKER_ID>/docker-web-app:3.0 .
+```
+
+3.  Create the DynamoDB resource using terraform
+    To do this ensure you are in the project2/terraform-code folder and run the commands below
+
+```bash
+terraform init
+```
+
+```bash
+terraform plan
+```
+
+```bash
+terraform apply
+```
+
+4. Run the docker image to view the project. Pass your AWS
+
+```bash
+docker run -it -p 8080:80 \
+  --env AWS_ACCESS_KEY_ID=AKIAV67JMNS6GJO2Z6GK \
+  --env AWS_SECRET_ACCESS_KEY=pdrASslLjOxfm8Q+m6HD7v+pqKSF95I0DIzW0/z/ \
+  leslienarh2023/docker-web-app:3.0
+```
