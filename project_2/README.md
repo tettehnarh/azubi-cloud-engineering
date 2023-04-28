@@ -195,7 +195,7 @@ terraform apply
 
 ```bash
 docker run -it -p 8080:80 \
-  --env AWS_ACCESS_KEY_ID=AKIAV67JMNS6GJO2Z6GK \
-  --env AWS_SECRET_ACCESS_KEY=pdrASslLjOxfm8Q+m6HD7v+pqKSF95I0DIzW0/z/ \
+  --env AWS_ACCESS_KEY_ID=<YOUR_AWS_ACCESS_KEY> \
+  --env AWS_SECRET_ACCESS_KEY=<YOUR_AWS_SECRET_ACCESS_KEY>/z/ \
   leslienarh2023/docker-web-app:3.0
 ```
