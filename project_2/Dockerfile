@@ -25,7 +25,7 @@ RUN cd / && \
     git clone https://github.com/aws/aws-sdk-php.git
 
 # Copy the code into the container
-COPY *.php composer.json /var/www/html/
+COPY *.php composer.json *.css /var/www/html/
 
 RUN composer install
 
